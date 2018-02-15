@@ -36,3 +36,10 @@
 * Add remote repository to your local repository `git remote add origin remote_repository_url`
 * `git remote -v` to verify new remote url
 * Push local changes to remote `git push origin master`
+
+## DEPLOYING APP ON HEROKU
+
+First of all create a requirements file `pip freeze > requirements.txt`
+Update requirements file every time you add a new depedancy by running command above
+Then install gunicorn `pip install gunicorn`
+Create a `Procfile`, and this the server to `web: gunicorn app:app`
