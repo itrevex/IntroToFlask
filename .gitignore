@@ -1,0 +1,6 @@
+# VIRTUAL ENV AND PYTHON LIBS
+#
+Include/
+Lib/
+Scripts/
+tcl/
