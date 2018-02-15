@@ -46,3 +46,5 @@
 * create app on heroku site, or in command line interface `heroku create`
 * `heroku git:remote -a intro-to-flask` to link heroku to remote
 * `git push heroku master` to push changes to heroku
+* ensure that atleast one instance of the app is running before opening `heroku ps:scale=1`
+* `heroku open` to open app
