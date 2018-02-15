@@ -33,7 +33,7 @@
 * Create new repository on github
 * Initial git on in your local project `git init`
 * Add and commit files inside your local repository `git add -am"First Commit"`
-* Add remote repository to your local repository `git remote add origin remote_repository_url`
+* Add remote repository to your local repository `git remote add origin remote_repository_url.gi`
 * `git remote -v` to verify new remote url
 * Push local changes to remote `git push origin master`
 
