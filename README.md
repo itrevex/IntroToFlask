@@ -43,3 +43,6 @@
 * Update requirements file every time you add a new depedancy by running command above
 * Then install gunicorn `pip install gunicorn`
 * Create a `Procfile`, and this the server to `web: gunicorn app:app`
+* create app on heroku site, or in command line interface `heroku create`
+* `heroku git:remote -a intro-to-flask` to link heroku to remote
+* `git push heroku master` to push changes to heroku
