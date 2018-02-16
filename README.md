@@ -17,11 +17,12 @@
 
 ### 2. Install Flask in Virtual Environment
 
-* `virtualenv --version` check if virtual environment was installed succesfully
-* `$ virtualenv flaskapp` creates a folder _flaskapp/_, and sets a clean copy of Python inside
-* `cd flaskapp` to enter new developement environment
-* `. bin/activate` or `scripts/activate.bat` activate environment to begin working in it
-* `pip install Flask` safely install flask in new environment
+* create app folder `app`
+* `cd app` to enter `app` folder where we shall install the virtualenv
+* run `virtualenv --version` to check if virtual environment was installed succesfully
+* `$ virtualenv env` creates a folder _env/_, and sets a clean copy of Python inside
+* `env/. bin/activate` or `env/scripts/activate` to activate environment and begin working with it
+* `pip install Flask` safely install flask in new virtual environment
 
 ## MAKING THE FLASK APP
 
@@ -32,9 +33,12 @@
 
 * Create new repository on github
 * Initial git on in your local project `git init`
-* Add and commit files inside your local repository `git add -am"First Commit"`
+* Create a `.gitignore` file and ignore files inside `env` folder, which our virtual env folder
+* Add and commit files inside your local repository `git add . && -am"First Commit"`
 * Add remote repository to your local repository `git remote add origin remote_repository_url.gi`
 * `git remote -v` to verify new remote url
+* `git pull origin` to get changes on the origin synced with those you have locally.
+* if you find there some staged files from remote that you want to reset, do a `git resest filename` and you can remove the changes and commit what you exactly want.
 * Push local changes to remote `git push origin master`
 
 ## DEPLOYING APP ON HEROKU
@@ -43,10 +47,10 @@
 * Update requirements file every time you add a new depedancy by running command above
 * Then install gunicorn `pip install gunicorn`
 * Create a `Procfile`, and this the server to `web: gunicorn app:app`, see _*setting up Procfile below*_
-* create app on heroku site, or in command line interface `heroku create`
+* create app on heroku site, or in command line interface `heroku create app_name`, _app_name_ is not mandatory, if you left it out, heroku would generate one for you.
 * `heroku git:remote -a intro-to-flask` to link heroku to remote
 * `git push heroku master` to push changes to heroku
-* ensure that atleast one instance of the app is running before opening `heroku ps:scale=1`
+* ensure that at least one instance of the app is running before opening `heroku ps:scale=1`
 * `heroku open` to open app
 
 ### Setting Up the Procfile
