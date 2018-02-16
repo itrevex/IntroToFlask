@@ -48,3 +48,7 @@
 * `git push heroku master` to push changes to heroku
 * ensure that atleast one instance of the app is running before opening `heroku ps:scale=1`
 * `heroku open` to open app
+
+### Setting Up the Procfile
+
+*`web: gunicorn routes: app`* This means that use heroku's `web` process to run the `gunicorn` server and look for a file named ``routes.py` and run the `app` method in that file. Voula, your done setting up the `Procfile`.
