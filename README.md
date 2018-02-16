@@ -42,7 +42,7 @@
 * First of all create a requirements file `pip freeze > requirements.txt`
 * Update requirements file every time you add a new depedancy by running command above
 * Then install gunicorn `pip install gunicorn`
-* Create a `Procfile`, and this the server to `web: gunicorn app:app`
+* Create a `Procfile`, and this the server to `web: gunicorn app:app`, see _*setting up Procfile below*_
 * create app on heroku site, or in command line interface `heroku create`
 * `heroku git:remote -a intro-to-flask` to link heroku to remote
 * `git push heroku master` to push changes to heroku
